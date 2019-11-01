@@ -9,18 +9,20 @@ import java.util.logging.Logger;
  * @author Bogdan
  */
 
-public abstract class AbstractApp {
+public abstract class AbstractApp
+{
 
     /**
      *
      *
      * @author Bogdan
      */
-    public static void main(final String param) throws HobbyException {
+    public static void main(final String param)
+    {
 
         final Logger log = Logger.getLogger(AbstractApp.class.getName());
 
-        final Hobby[] Arr_r = new Hobby[4];
+        final Hobby[] arr_r = new Hobby[4];
 
         log.fine("Hello, tell me some information about u");
 
@@ -57,13 +59,13 @@ public abstract class AbstractApp {
         final Hobby obj3 = new Surfing(name1, age1, high, place);
         final Hobby obj4 = new Surfing("Nick", 19, 5, "Gold Coast");
 
-        Arr_r[0] = obj1;
-        Arr_r[1] = obj2;
-        Arr_r[2] = obj3;
-        Arr_r[3] = obj4;
+        arr_r[0] = obj1;
+        arr_r[1] = obj2;
+        arr_r[2] = obj3;
+        arr_r[3] = obj4;
 
 
-        for (final Hobby b : Arr_r)
+        for (final Hobby b : arr_r)
         {
             try
             {

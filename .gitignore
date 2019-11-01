@@ -1,2 +1,6 @@
 # Project exclude paths
 /target/
+echo ".idea" > .gitignore
+echo "Hobby3.iml" > .gitignore
+git rm -r -f --cached 
+git add .

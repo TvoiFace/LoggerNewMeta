@@ -17,19 +17,23 @@ public class Cooking extends Hobby{
 
     }
 
-    public String getDish() {
+    public String getDish()
+    {
         return dish;
     }
 
-    public void setDish(String dish) {
+    public void setDish(String dish)
+    {
         this.dish = dish;
     }
 
-    public int getHowlon() {
+    public int getHowlon()
+    {
         return howlon;
     }
 
-    public void setHowlon(int howlon) {
+    public void setHowlon(int howlon)
+    {
         this.howlon = howlon;
     }
 
