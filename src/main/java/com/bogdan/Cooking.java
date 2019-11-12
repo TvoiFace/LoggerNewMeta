@@ -1,6 +1,10 @@
 package com.bogdan;
 
-public class Cooking extends Hobby{
+import org.apache.log4j.Logger;
+
+public class Cooking extends Hobby
+{
+    final static Logger logger = Logger.getLogger(Cooking.class);
     private String dish;
     private int howlon;
 

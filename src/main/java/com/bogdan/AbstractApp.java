@@ -1,7 +1,7 @@
 package com.bogdan;
 
 import java.util.Scanner;
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -20,40 +20,40 @@ public abstract class AbstractApp
     public static void main(final String param)
     {
 
-        final Logger log = Logger.getLogger(AbstractApp.class.getName());
+        final Logger log = Logger.getLogger(AbstractApp.class);
 
         final Hobby[] arr_r = new Hobby[4];
 
-        log.fine("Hello, tell me some information about u");
+        log.info("Hello, tell me some information about u");
 
         final Scanner scn = new Scanner(System.in, "UTF-8");
 
-        log.fine("What is ur name");
+        log.info("What is ur name");
         final String name = scn.nextLine();
 
-        log.fine("How old are u?");
+        log.info("How old are u?");
         final int age = scn.nextInt();
 
-        log.fine("What is ur favourite dish?");
+        log.info("What is ur favourite dish?");
         final String dish = scn.next();
 
-        log.fine("How long have u been cooking?");
+        log.info("How long have u been cooking?");
         final int howlong = scn.nextInt();
 
 
         final Hobby obj1 = new Cooking(name, age, dish, howlong);
         final Hobby obj2 = new Cooking("John", 19, "cream soup", 3);
 
-        log.fine("What is ur name");
+        log.info("What is ur name");
         final String name1 = scn.next();
 
-        log.fine("How old are u?");
+        log.info("How old are u?");
         final int age1 = scn.nextInt();
 
-        log.fine("The height of the largest wave u seen");
+        log.info("The height of the largest wave u seen");
         final int high = scn.nextInt();
 
-        log.fine("Where are u surfing?");
+        log.info("Where are u surfing?");
         final String place = scn.next();
 
         final Hobby obj3 = new Surfing(name1, age1, high, place);
@@ -72,7 +72,7 @@ public abstract class AbstractApp
                 b.tellAboutHobby();
             } catch(HobbyException ex)
             {
-                System.err.println(ex.getMessage());
+                log.error("EROR (Age is unreal)");
             }
 
         }
